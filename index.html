@@ -7,13 +7,65 @@
     <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
 <body>
-<div class="container">
-    <div class="logo-container">
-        <img src="assets/Accessfit.png" alt="AccessFit Logo">
+    <div class="container">
+        <div class="logo-container">
+            <img src="assets/Accessfit.png" alt="AccessFit Logo">
+        </div>
+        <h1>AccessFit Admin System</h1>
+        <div class="task">
+            <form action="">
+                <div>
+                <label for="usernameInput">Username:</label><br>
+                <input type="text" id="usernameInput" name="usernameInput" placeholder="Username" required><br>
+                </div>
+                <div>
+                <label for="passwordInput">Password:</label><br>
+                <input type="password" id="passwordInput" name="passwordInput" placeholder="Password" required><br>
+                </div>
+                <label for="showPassword">Show Password?</label><input type="checkbox" onClick="passwordVisibility()"><br>
+                <button type="submit" value="submit">Login</button>
+            </form>
+        </div>
+        <div class="task">
+            <h2>Monthly Membership Fee:</h2>
+            <div id="total-membership-fee"></div>
+        </div>
+        <div class="task">
+            <h2>New Gym Member Clients:</h2>
+            <form action="" id="newGymMemberForm">
+                <label for="newMemberFirstName">First Name:</label>
+                <input type="text" id="newMemberFirstName" required><br>
+                <label for="newMemberLastName">Last Name:</label>
+                <input type="text" id="newMemberLastName" required><br>
+                <label for="newMemberMembership">Membership Type:</label>
+                <select id="newMemberMembership" required>
+                    <option >Standard</option>
+                    <option >Premium</option>
+                </select>
+                <label for="newMemberTrainer">Do you have a trainer in mind? (if not, leave Blank)</label>
+                <input type="text" id="newMemberTrainer" placeholder="Trainer Name (optional)">
+                <button type="submit" value="submit" id="create-new-gym-member-btn">Sign Up!</button>
+            </form>
+        </div>
+        <div class="task">
+            <div>
+                <h3>Active Members:</h3>
+                <ul id="all-gym-members"></ul>
+            </div>
+        </div>
+        <div class="task">
+            <h3>Paid Gym Classes:</h3>
+            <div>
+                <ul id="paid-gym-classes"></ul>
+            </div>
+        </div>
+        <div class="task">
+            <h3>Create a New Gym Class:</h3>
+            <input type="text" placeholder="Class Name">
+            <input type="number" placeholder="Class Price">
+            <button type="submit" value="submit">Create Class</button>
+        </div>
     </div>
-    <h1>AccessFit Admin System</h1>
-
-</div>
 <script src="scripts/script.js"></script>
 </body>
 </html>
