@@ -60,7 +60,7 @@ console.log(trialClass);
 let showPassword = false;
 
 function passwordVisibility(showPassword){
-    let pw = document.getElementById("passwordInput");
+    let pw = document.getElementById("password-input");
     showPassword = !showPassword;
     if(!showPassword){
         pw.type = "password";
@@ -78,18 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const listItem = document.createElement('li');
             listItem.textContent = item.displayInfo ? item.displayInfo() : `${item.name}, Price: $${item.price}`;
             listElement.appendChild(listItem);
-        })
+        });
     };
 
     document.getElementById('total-membership-fee').innerHTML = `<h4>Total Membership Fees: $${calculateMembershipFees(membershipFees)}</h4>`;
 
     displayArrayList(filterPaidClasses(gymClasses), "paid-gym-classes");
 
-    document.getElementById('create-new-gym-member-btn').onClick = () => {
-        const firstName = document.getElementById('newMemberFirstName').value;
-        const lastName = document.getElementById('newMemberLastName').value;
-        const membershipType = document.getElementById('newMemberMembership').value;
-        const trainerName = document.getElementById('newMemberTrainer').value;
+    document.getElementById('create-new-gym-member-btn').onclick = () => {
+        const firstName = document.getElementById('new-member-first-name').value;
+        const lastName = document.getElementById('new-member-last-name').value;
+        const membershipType = document.getElementById('new-member-membership').value;
+        const trainerName = document.getElementById('new-member-trainer').value;
 
         let member;
         if(trainerName){
@@ -101,4 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
         members.push(member);
         displayArrayList(members, 'all-gym-members');
     };
+
+    document.getElementById('create-new-gym-class-btn').onclick = () => {
+            const className = document.getElementById('new-class-name').value;
+            const classPrice = document.getElementById('new-class-price').value;
+    
+            let newClass = new GymClass(className, classPrice);
+    
+            gymClasses.push(newClass)
+            // needs function to loop through array of objects/gymClasses and append to DOM according to gymClass's price - class fee vs free.
+        };
 });

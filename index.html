@@ -13,39 +13,37 @@
         </div>
         <h1>AccessFit Admin System</h1>
         <div class="task">
-            <form action="">
+            <!-- <form action="">
                 <div>
-                <label for="usernameInput">Username:</label><br>
-                <input type="text" id="usernameInput" name="usernameInput" placeholder="Username" required><br>
+                <label for="username-input">Username:</label><br>
+                <input type="text" id="username-input" name="usernameInput" required><br>
                 </div>
                 <div>
-                <label for="passwordInput">Password:</label><br>
-                <input type="password" id="passwordInput" name="passwordInput" placeholder="Password" required><br>
+                <label for="password-input">Password:</label><br>
+                <input type="password" id="password-input" name="passwordInput" required><br>
                 </div>
                 <label for="showPassword">Show Password?</label><input type="checkbox" onClick="passwordVisibility()"><br>
                 <button type="submit" value="submit">Login</button>
-            </form>
+            </form> -->
         </div>
         <div class="task">
             <h2>Monthly Membership Fee:</h2>
             <div id="total-membership-fee"></div>
         </div>
         <div class="task">
-            <h2>New Gym Member Clients:</h2>
-            <form action="" id="newGymMemberForm">
-                <label for="newMemberFirstName">First Name:</label>
-                <input type="text" id="newMemberFirstName" required><br>
-                <label for="newMemberLastName">Last Name:</label>
-                <input type="text" id="newMemberLastName" required><br>
-                <label for="newMemberMembership">Membership Type:</label>
-                <select id="newMemberMembership" required>
-                    <option >Standard</option>
-                    <option >Premium</option>
-                </select>
-                <label for="newMemberTrainer">Do you have a trainer in mind? (if not, leave Blank)</label>
-                <input type="text" id="newMemberTrainer" placeholder="Trainer Name (optional)">
-                <button type="submit" value="submit" id="create-new-gym-member-btn">Sign Up!</button>
-            </form>
+            <h2>New Gym Member:</h2>
+            <label for="new-member-first-name">First Name:</label>
+            <input type="text" id="new-member-first-name"><br>
+            <label for="new-member-last-name">Last Name:</label>
+            <input type="text" id="new-member-last-name"><br>
+            <label for="new-member-membership">Membership Type:</label>
+            <select id="new-member-membership">
+                <option value="Standard">Standard</option>
+                <option value="Premium">Premium</option>
+            </select>
+            <label for="new-member-trainer">Do you have a trainer in mind? (if not, leave Blank)</label>
+            <input type="text" id="new-member-trainer">
+            <button id="create-new-gym-member-btn">Add New Member</button>
         </div>
         <div class="task">
             <div>
@@ -55,15 +53,16 @@
         </div>
         <div class="task">
             <h3>Paid Gym Classes:</h3>
-            <div>
-                <ul id="paid-gym-classes"></ul>
-            </div>
+            <ul id="paid-gym-classes"></ul>
+            <ul id="free-gym-classes"></ul>
         </div>
         <div class="task">
             <h3>Create a New Gym Class:</h3>
-            <input type="text" placeholder="Class Name">
-            <input type="number" placeholder="Class Price">
-            <button type="submit" value="submit">Create Class</button>
+            <label for="new-class-name">Class Name:</label>
+            <input type="text" id="new-class-name">
+            <label for="new-class-price">Class Fee:</label>
+            <input type="number" id="new-class-price">
+            <button id="create-new-gym-class-btn">Add A New Gym Class</button>
         </div>
     </div>
 <script src="scripts/script.js"></script>
