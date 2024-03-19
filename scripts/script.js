@@ -111,4 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gymClasses.push(newClass)
             // needs function to loop through array of objects/gymClasses and append to DOM according to gymClass's price - class fee vs free.
         };
+
+    
+
 });
